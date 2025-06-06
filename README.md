@@ -21,6 +21,8 @@ This PowerShell script automates secure, backups of database files and image dir
 - Windows 10+ with PowerShell 5.1
 - Network access to: `\\multilab-na.ad.salk.edu\hpi_automation`
 - AD credentials with write access to the target share
+- Images scanned using https://github.com/eberrigan/bloom-desktop-pilot.
+- Prisma database with metadata from scans.
 - A Slack Webhook URL (for alerting)
 
 ---
@@ -37,6 +39,7 @@ This PowerShell script automates secure, backups of database files and image dir
 ## 🧪 Testing the Script
 
 1. Save the script as `backup.ps1`
+2. Modify `$imagesSource`, `$dbSource`, `$slackWebhook` in the script to image directory, database location, and Slack webhook respectively.
 2. Open PowerShell:
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\backup.ps1
@@ -59,6 +62,7 @@ This PowerShell script automates secure, backups of database files and image dir
      Program: powershell
      Arguments: -ExecutionPolicy Bypass -File "C:\ProgramData\HPI_Backup\backup.ps1"
      ```
+**Note** For this to work, the database and images have to be in a location that is accessible to user running the script.
 
 ---
 
