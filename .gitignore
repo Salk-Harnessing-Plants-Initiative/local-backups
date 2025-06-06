@@ -192,3 +192,40 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+# Base PowerShell ignores
+*.ps1~        # Backup files
+*.psm1~       # Module backups
+*.log         # Log files
+*.bak
+*.tmp
+*.swp
+*.swo
+*.sln.docstates
+
+# If you generate or test .zip backups locally
+*.zip
+
+# Ignore actual logs created during runtime
+logs/
+*.log
+
+# Ignore Credential Manager exports or sensitive configs
+credentials.json
+secrets.json
+*.key
+*.env
+
+# Ignore Windows Task Scheduler export files unless intended
+*.xml
+
+# Ignore compiled executables or test binaries
+*.exe
+*.dll
+
+# Ignore VS Code project settings (if you use it)
+.vscode/
+
+# Optional: Ignore README and markdown previews generated locally
+*.md.html
